@@ -1,0 +1,161 @@
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+ }
+ .todo-item p {
+  color: #888;
+  text-decoration: line-through;
+ }
+ 
+body {
+  font-family: Arial, sans-serif;
+  background-image: url('https://img.freepik.com/free-photo/flat-lay-notebook-with-list-desk_23-2148938724.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 60px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.task-input {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.task-input__field {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.task-input__button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.task-input__button:hover {
+  background-color: #0056b3;
+}
+
+
+
+.filter-bar {
+  text-align: center;
+  margin-bottom: 20px;
+  
+}
+.filter-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+  font-size: 20px;
+
+}
+
+.filter-button:hover {
+  background-color: #0056b3;
+}
+
+
+.task-container {
+  margin: 90px;
+  
+}
+
+.task-list {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  
+}
+
+.task-list th, .task-list td {
+  padding: 10px;
+  border: 3px solid black;
+  font-size: 20px;
+}
+
+.task-list th {
+  background-color: #f0f0f0;
+  text-align: left;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.task-item__checkbox {
+  margin-right: 10px;
+}
+
+.task-item__delete, .task-item__edit, .task-item__save {
+  padding: 5px 10px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 5px;
+  font-size: 20px;
+
+}
+
+.task-item__edit {
+  background-color: #ffc107;
+  font-size: 20px;
+}
+
+.task-item__delete:hover, .task-item__edit:hover, .task-item__save:hover {
+  background-color: #bd2130;
+  
+}
+
+.task-item__action-buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.task-item__action-buttons button {
+  margin-bottom: 5px;
+}
+
+.blurry-background {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.blurry-background:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://img.freepik.com/free-photo/flat-lay-notebook-with-list-desk_23-2148938724.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: blur(10px); /* Adjust the blur radius as needed */
+  z-index: -1;
+}
+
+@media (max-width: 768px) {
+  .task-list th, .task-list td {
+    padding: 8px;
+  }
+}
